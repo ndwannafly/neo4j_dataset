@@ -1,0 +1,7 @@
+Neo4j:
+
+MATCH (t:Tweet {favorites: 18})-[:MENTIONS]->(m:Me) return t
+
+Gremlin:
+
+V("Me").out("MENTIONS").has("favorites", eq(18));

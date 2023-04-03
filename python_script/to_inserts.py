@@ -1,7 +1,7 @@
 import csv
 
-FILE_NAME = "../databases/slack/Owner.csv"
-TABLE_NAME = "Owner"
+FILE_NAME = "../databases/twitter/tweet.csv"
+TABLE_NAME = "tweet"
 
 
 def transform_string(attributes: str, table_name: str) -> str:
