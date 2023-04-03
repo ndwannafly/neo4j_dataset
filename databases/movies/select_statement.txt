@@ -1,0 +1,10 @@
+Neo4j:
+
+MATCH(n:Person {name: "Lana Wachowski"})-[:DIRECTED]->(m:Movie {released: 1999}) return n
+
+Gremlin:
+
+V("Person").has("name", eq("Lana Wachowski")).out("DIRECTED").has("released", eq(1999));
+V("Movie").has("released", eq(1999)).out("DIRECTED").has("name", eq("Lana Wachowski"));
+V("Person").has("name", eq("Lana Wachowski"));
+V("Movie").has("released", eq(1999));

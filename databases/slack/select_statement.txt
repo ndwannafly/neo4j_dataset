@@ -1,0 +1,7 @@
+Neo4j:
+
+MATCH(n:Owner)-[:MEMBER_OF]->(c:Channel {name: "neo4j-sdn-ogm"}) return n
+
+Gremlin:
+
+V("Owner").out("MEMBER_OF").has("name", eq("neo4j-sdn-ogm"));
